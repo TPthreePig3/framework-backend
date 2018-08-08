@@ -2,12 +2,13 @@ package org.threepig.framework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author xiangyu.qi@hand-china.com on 2018/8/5.
+ * @author shawn777
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = LiquibaseAutoConfiguration.class)
 @EnableSwagger2
 public class Application {
 
